@@ -1,6 +1,6 @@
 export const AGENT = {
   name: 'Inmo Analista',
-  title: 'Soluciones inmobiliarias',
+  title: 'Inmobiliaria',
   city: 'Requena',
   province: 'Valencia',
   tagline: 'Asesoramiento personalizado para compra, venta y alquiler en Requena y la provincia de Valencia.',

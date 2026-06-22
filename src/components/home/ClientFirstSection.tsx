@@ -71,7 +71,7 @@ export function ClientFirstSection() {
           }`}
         >
           <p className="text-gold text-xs tracking-[0.3em] uppercase mb-3">Nuestra filosofía</p>
-          <h2 className="section-title mb-5">El cliente lo primero</h2>
+          <h2 className="section-title mb-5">Nuestra prioridad: el cliente</h2>
           <p className="text-base md:text-lg text-stone-600 leading-relaxed">
             Lideramos cada operación con un servicio adaptado a tus necesidades, porque tu confianza es lo que más valoramos.
           </p>

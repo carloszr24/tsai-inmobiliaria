@@ -1,4 +1,4 @@
-# Sales Inmobiliaria — Web
+# Inmo Analista — Web
 
 Next.js + TypeScript + Tailwind. Catálogo de propiedades en archivo local (`src/data/properties.ts`).
 
