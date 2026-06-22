@@ -73,6 +73,18 @@ export function Navbar() {
     closeTimer.current = setTimeout(() => setServicesOpen(false), 110)
   }
 
+  const navLinkClass = (isActive: boolean) =>
+    cn(
+      'inline-flex items-center gap-1 min-h-10 text-[11px] font-medium uppercase tracking-[0.13em] leading-none transition-colors duration-200',
+      isActive
+        ? transparent
+          ? 'text-white'
+          : 'text-stone-900'
+        : transparent
+          ? 'text-stone-200 hover:text-white'
+          : 'text-stone-500 hover:text-stone-900'
+    )
+
   return (
     <header
       className={cn(
@@ -97,34 +109,24 @@ export function Navbar() {
           </Link>
 
           <div className="hidden md:flex items-center gap-7 ml-auto">
-            {/* Desktop nav */}
             <nav className="flex items-center gap-7">
-              {links.map((link) => (
+              {links.map((link) =>
                 link.href === '/sobre-nosotros' ? (
                   <div
                     key={link.href}
-                    className="relative"
+                    className="relative flex items-center"
                     onMouseEnter={openServices}
                     onMouseLeave={closeServices}
                   >
                     <Link
                       href={link.href}
-                      className={cn(
-                        'inline-flex items-center gap-1 text-[11px] font-medium uppercase tracking-[0.13em] transition-colors duration-200',
-                        pathname === link.href || servicesOpen
-                          ? transparent
-                            ? 'text-white'
-                            : 'text-stone-900'
-                          : transparent
-                            ? 'text-stone-200 hover:text-white'
-                            : 'text-stone-500 hover:text-stone-900'
-                      )}
+                      className={navLinkClass(pathname === link.href || servicesOpen)}
                     >
                       {link.label}
                       <svg
                         viewBox="0 0 20 20"
                         aria-hidden="true"
-                        className={cn('h-3.5 w-3.5 transition-transform duration-200', servicesOpen && 'rotate-180')}
+                        className={cn('h-3.5 w-3.5 shrink-0 transition-transform duration-200', servicesOpen && 'rotate-180')}
                       >
                         <path
                           d="M5.5 7.5 10 12l4.5-4.5"
@@ -164,31 +166,17 @@ export function Navbar() {
                     </div>
                   </div>
                 ) : (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    className={cn(
-                      'text-[11px] font-medium uppercase tracking-[0.13em] transition-colors duration-200',
-                      pathname === link.href
-                        ? transparent
-                          ? 'text-white'
-                          : 'text-stone-900'
-                        : transparent
-                          ? 'text-stone-200 hover:text-white'
-                          : 'text-stone-500 hover:text-stone-900'
-                    )}
-                  >
+                  <Link key={link.href} href={link.href} className={navLinkClass(pathname === link.href)}>
                     {link.label}
                   </Link>
                 )
-              ))}
+              )}
             </nav>
 
-            {/* CTA */}
             <ValoracionGratuitaModal
               triggerLabel="Valoración gratuita"
               triggerClassName={cn(
-                'rounded-md text-[11px] uppercase tracking-[0.13em] px-5 py-2.5',
+                'inline-flex items-center justify-center min-h-10 rounded-md text-[11px] uppercase tracking-[0.13em] leading-none px-5 py-2.5',
                 transparent
                   ? 'inline-flex items-center justify-center border border-white/80 text-white hover:bg-white hover:text-stone-900 transition-colors duration-200'
                   : 'btn-primary'
