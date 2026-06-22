@@ -18,15 +18,13 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-6 md:px-10 py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           <div className="md:col-span-2">
-            <div className="inline-flex rounded-xl bg-white px-3 py-2 shadow-sm ring-1 ring-white/10">
-              <Image
-                src="/images/inmo-analista.png"
-                alt={`${AGENT.name} logo`}
-                width={220}
-                height={58}
-                className="h-12 w-auto"
-              />
-            </div>
+            <Image
+              src="/images/inmo-analista.png"
+              alt={`${AGENT.name} logo`}
+              width={220}
+              height={58}
+              className="h-12 w-auto brightness-0 invert"
+            />
             <p className="mt-4 text-sm leading-relaxed text-stone-300 max-w-sm">
               {AGENT.title} en {AGENT.city}. {AGENT.tagline}
             </p>

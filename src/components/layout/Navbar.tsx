@@ -78,29 +78,21 @@ export function Navbar() {
       className={cn(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
         transparent
-          ? 'bg-transparent border-b border-transparent'
+          ? 'bg-gradient-to-b from-white/70 via-white/25 to-transparent border-b border-white/30'
           : 'bg-white/95 backdrop-blur-md border-b border-stone-200/90 shadow-sm'
       )}
     >
       <div className="max-w-7xl mx-auto px-6 md:px-10">
         <div className="relative flex items-center h-[4.5rem] md:h-20">
           {/* Logo */}
-          <Link
-            href="/"
-            className={cn(
-              'flex items-center shrink-0 rounded-xl transition-all duration-300',
-              transparent
-                ? 'bg-white/95 px-3 py-1.5 shadow-[0_4px_24px_rgba(0,0,0,0.28)] backdrop-blur-sm ring-1 ring-white/70'
-                : 'bg-transparent px-0 py-0 shadow-none ring-0'
-            )}
-          >
+          <Link href="/" className="flex items-center shrink-0">
             <Image
               src="/images/inmo-analista.png"
               alt={`${AGENT.name} logo`}
               width={300}
               height={80}
               priority
-              className="h-11 w-auto md:h-[3.75rem] lg:h-14"
+              className="h-14 w-auto md:h-[4.25rem] lg:h-[4.5rem]"
             />
           </Link>
 
@@ -121,10 +113,10 @@ export function Navbar() {
                         'inline-flex items-center gap-1 text-[11px] font-medium uppercase tracking-[0.13em] transition-colors duration-200',
                         pathname === link.href || servicesOpen
                           ? transparent
-                            ? 'text-white'
+                            ? 'text-stone-900'
                             : 'text-stone-900'
                           : transparent
-                            ? 'text-stone-200 hover:text-white'
+                            ? 'text-stone-600 hover:text-stone-900'
                             : 'text-stone-500 hover:text-stone-900'
                       )}
                     >
@@ -179,10 +171,10 @@ export function Navbar() {
                       'text-[11px] font-medium uppercase tracking-[0.13em] transition-colors duration-200',
                       pathname === link.href
                         ? transparent
-                          ? 'text-white'
+                          ? 'text-stone-900'
                           : 'text-stone-900'
                         : transparent
-                          ? 'text-stone-200 hover:text-white'
+                          ? 'text-stone-600 hover:text-stone-900'
                           : 'text-stone-500 hover:text-stone-900'
                     )}
                   >
@@ -198,7 +190,7 @@ export function Navbar() {
               triggerClassName={cn(
                 'rounded-md text-[11px] uppercase tracking-[0.13em] px-5 py-2.5',
                 transparent
-                  ? 'inline-flex items-center justify-center border border-white/80 text-white hover:bg-white hover:text-stone-900 transition-colors duration-200'
+                  ? 'inline-flex items-center justify-center border border-stone-800/80 text-stone-900 hover:bg-stone-900 hover:text-white transition-colors duration-200'
                   : 'btn-primary'
               )}
             />
@@ -206,7 +198,7 @@ export function Navbar() {
 
           {/* Mobile toggle */}
           <button
-            className={cn('md:hidden ml-auto p-2 transition-colors', transparent ? 'text-white' : 'text-stone-600')}
+            className={cn('md:hidden ml-auto p-2 transition-colors', transparent ? 'text-stone-800' : 'text-stone-600')}
             onClick={() => setOpen(!open)}
             aria-label="Menu"
           >
@@ -214,21 +206,21 @@ export function Navbar() {
               <span
                 className={cn(
                   'block h-px transition-all duration-300',
-                  transparent ? 'bg-white' : 'bg-stone-900',
+                  transparent ? 'bg-stone-900' : 'bg-stone-900',
                   open && 'rotate-45 translate-y-2'
                 )}
               />
               <span
                 className={cn(
                   'block h-px transition-all duration-300',
-                  transparent ? 'bg-white' : 'bg-stone-900',
+                  transparent ? 'bg-stone-900' : 'bg-stone-900',
                   open && 'opacity-0'
                 )}
               />
               <span
                 className={cn(
                   'block h-px transition-all duration-300',
-                  transparent ? 'bg-white' : 'bg-stone-900',
+                  transparent ? 'bg-stone-900' : 'bg-stone-900',
                   open && '-rotate-45 -translate-y-2'
                 )}
               />
