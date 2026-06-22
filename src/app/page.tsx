@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { getFeaturedPropertiesForHome } from '@/lib/properties-store'
-import { ReviewsCarousel } from '@/components/home/ReviewsCarousel'
+import { ClientFirstSection } from '@/components/home/ClientFirstSection'
 import { FeaturedPropertiesGrid } from '@/components/home/FeaturedPropertiesGrid'
 import { HeroCarousel } from '@/components/home/HeroCarousel'
 import { ValoracionGratuitaModal } from '@/components/home/ValoracionGratuitaModal'
@@ -48,7 +48,7 @@ export default async function HomePage() {
         {/* Content */}
         <div className="relative z-10 -mt-4 md:-mt-6 text-center px-4 min-[400px]:px-6 max-w-5xl mx-auto">
           <h1 className="font-display text-white [text-shadow:0_2px_10px_rgba(0,0,0,0.45)] text-balance max-md:tracking-[-0.02em] text-[calc(clamp(2rem,6.5vw+0.25rem,3.2rem)+2pt)] md:text-[calc(clamp(2.5rem,4.8vw+0.9rem,5.2rem)+2pt)] leading-[1.12] md:leading-[1.06] mb-4 md:mb-5 animate-fade-up">
-            Compra o vende tu vivienda en Fernán Núñez
+            Compra o vende tu vivienda en Requena
             <span className="hidden md:inline"> </span>
             <br className="md:hidden" aria-hidden="true" />
             en <span className="text-brand-cyan-light [text-shadow:0_2px_10px_rgba(0,0,0,0.5)]">menos de 60 días</span>
@@ -74,7 +74,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <ReviewsCarousel />
+      <ClientFirstSection />
 
       {/* FEATURED PROPERTIES */}
       <section className="py-24 px-6 md:px-10 max-w-7xl mx-auto">
@@ -123,7 +123,7 @@ export default async function HomePage() {
               {
                 icon: FileIcon,
                 title: 'Valoración profesional',
-                desc: 'Conoce el precio real de mercado de tu inmueble en Fernán Núñez y la provincia de Córdoba.',
+                desc: 'Conoce el precio real de mercado de tu inmueble en Requena y la provincia de Valencia.',
               },
               {
                 icon: HandshakeIcon,
@@ -146,9 +146,6 @@ export default async function HomePage() {
       {/* CTA BANNER */}
       <section className="bg-gradient-to-r from-brand-cyan-dark via-brand-cyan-mid to-brand-cyan py-24 px-6 md:px-10 text-center">
         <div className="max-w-2xl mx-auto rounded-2xl border border-white/25 bg-black/10 px-6 py-10 md:px-10 md:py-12">
-          <p className="mb-4 text-xs uppercase tracking-[0.13em] text-brand-cyan-light">
-            4,6/5 en Google
-          </p>
           <h2 className="mb-6 font-display text-4xl font-semibold leading-tight text-white md:text-5xl">
             ¿Listo para encontrar<br />tu próximo hogar?
           </h2>

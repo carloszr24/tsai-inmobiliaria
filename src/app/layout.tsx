@@ -23,9 +23,9 @@ const logo = Montserrat({
 })
 
 export const metadata: Metadata = {
-  title: 'Sales Inmobiliaria | Agencia inmobiliaria en Fernán Núñez, Córdoba',
-  description: 'Compra, venta y alquiler de propiedades en Fernán Núñez y la provincia de Córdoba con asesoramiento cercano y profesional.',
-  keywords: 'sales inmobiliaria, inmobiliaria fernan nunez, agencia inmobiliaria cordoba, compra vivienda, venta vivienda, alquiler',
+  title: 'Inmo Analista | Agencia inmobiliaria en Requena, Valencia',
+  description: 'Compra, venta y alquiler de propiedades en Requena y la provincia de Valencia con asesoramiento cercano y profesional.',
+  keywords: 'inmo analista, inmobiliaria requena, agencia inmobiliaria valencia, compra vivienda, venta vivienda, alquiler',
 }
 
 export default function RootLayout({
