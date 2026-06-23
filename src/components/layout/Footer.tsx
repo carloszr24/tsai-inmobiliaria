@@ -19,11 +19,11 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           <div className="md:col-span-2">
             <Image
-              src="/images/inmo-analista.png"
+              src="/images/tsai.jpg"
               alt={`${AGENT.name} logo`}
               width={220}
               height={58}
-              className="h-12 w-auto brightness-0 invert"
+              className="h-12 w-auto"
             />
             <p className="mt-4 text-sm leading-relaxed text-stone-300 max-w-sm">
               {AGENT.title} en {AGENT.city}. {AGENT.tagline}

@@ -23,9 +23,9 @@ const logo = Montserrat({
 })
 
 export const metadata: Metadata = {
-  title: 'Inmo Analista | Agencia inmobiliaria en Requena, Valencia',
-  description: 'Compra, venta y alquiler de propiedades en Requena y la provincia de Valencia con asesoramiento cercano y profesional.',
-  keywords: 'inmo analista, inmobiliaria requena, agencia inmobiliaria valencia, compra vivienda, venta vivienda, alquiler',
+  title: 'TSai Asesores | Agencia inmobiliaria en Mairena del Alcor, Sevilla',
+  description: 'Compra, venta y alquiler de propiedades en Mairena del Alcor y la provincia de Sevilla con asesoramiento cercano y profesional.',
+  keywords: 'tsai asesores, inmobiliaria mairena del alcor, agencia inmobiliaria sevilla, compra vivienda, venta vivienda, alquiler',
 }
 
 export default function RootLayout({
