@@ -46,7 +46,7 @@ export default async function HomePage() {
         </div>
 
         {/* Content */}
-        <div className="absolute inset-x-0 bottom-8 md:bottom-14 z-10 text-center px-4 min-[400px]:px-6 max-w-5xl mx-auto">
+        <div className="absolute inset-x-0 bottom-2 md:bottom-4 z-10 text-center px-4 min-[400px]:px-6 max-w-5xl mx-auto">
           <h1 className="font-display text-white [text-shadow:0_2px_10px_rgba(0,0,0,0.45)] text-balance max-md:tracking-[-0.02em] text-[calc(clamp(2rem,6.5vw+0.25rem,3.2rem)+2pt)] md:text-[calc(clamp(2.5rem,4.8vw+0.9rem,5.2rem)+2pt)] leading-[1.12] md:leading-[1.06] mb-4 md:mb-5 animate-fade-up">
             Compra o vende tu vivienda en Mairena
             <span className="hidden md:inline"> </span>
