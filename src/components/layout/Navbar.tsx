@@ -97,7 +97,13 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-6 md:px-10">
         <div className="relative flex items-center h-[4.5rem] md:h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center shrink-0">
+          <Link
+            href="/"
+            className={cn(
+              'flex items-center shrink-0 overflow-hidden transition-all duration-300',
+              transparent ? 'pointer-events-none max-w-0 opacity-0' : 'max-w-[18rem] opacity-100'
+            )}
+          >
             <Image
               src="/images/tsai.png"
               alt={`${AGENT.name} logo`}
@@ -108,7 +114,7 @@ export function Navbar() {
             />
           </Link>
 
-          <div className="hidden md:flex items-center gap-7 ml-auto">
+          <div className={cn('hidden md:flex items-center gap-7', transparent ? 'ml-0 w-full justify-end' : 'ml-auto')}>
             <nav className="flex items-center gap-7">
               {links.map((link) =>
                 link.href === '/sobre-nosotros' ? (
