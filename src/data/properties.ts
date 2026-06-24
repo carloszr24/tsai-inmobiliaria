@@ -11,23 +11,27 @@ const now = new Date()
 export const DEMO_PROPERTIES: Property[] = [
   {
     id: 'ref-26101-huerta-el-retiro',
-    title: 'Edificio en venta en La Huerta el Retiro — Ref. 26101',
-    price: 0,
-    location: 'La Huerta el Retiro, Mairena del Alcor, Sevilla',
+    title: 'Edificio en venta en La Huerta el Retiro',
+    price: 245_000,
+    location: 'Mairena del Alcor, Sevilla',
     type: 'casa',
     operation: 'venta',
     status: 'disponible',
-    description: `Ref: 26101. Estupendo edificio sobre parcela de 135 m², muy bien ubicado en el barrio de La Huerta el Retiro.
+    description: `Ref: 26101. Estupendo edificio sobre parcela de 135 m², muy bien ubicado en el barrio de La Huerta el Retiro, Mairena del Alcor.
 
 Consta de toda la planta baja de garaje/almacén con 129 m² construidos.
 
-En primera planta, vivienda de 143 m², distribuidos en amplio salón, sala de estar, cocina, patio interior, 3 habitaciones y 2 baños. Azotea.
+En primera planta, vivienda de 143 m², distribuidos en amplio salón, sala de estar, cocina, patio interior, 4 habitaciones y 2 baños. Azotea.
+
+272 m² construidos en total (900,74 €/m²).
 
 Aire acondicionado. Armarios empotrados.
 
 Los gastos de compra NO van incluidos en el precio.
 
 Equipamiento: lavadero, balcón y electrodomésticos.
+
+Extras: jardín y aire acondicionado.
 
 ${LEGAL_NOTICE}`,
     images: JSON.stringify([
@@ -37,9 +41,11 @@ ${LEGAL_NOTICE}`,
       '/images/tsai1(3).png',
     ]),
     fotocasaUrl: null,
-    bedrooms: 3,
+    bedrooms: 4,
     bathrooms: 2,
     sqMeters: 272,
+    floor: '1º',
+    hotWater: 'Butano',
     heating: 'Aire acondicionado',
     furnished: 'Electrodomésticos',
     featured: true,
@@ -48,11 +54,11 @@ ${LEGAL_NOTICE}`,
   },
   {
     id: 'ref-26110-local-benajete',
-    title: 'Local en Calle Benajete, 25 — Ref. 26110',
-    price: 0,
-    location: 'Calle Benajete, 25, Mairena del Alcor, Sevilla',
+    title: 'Local en Calle Benajete, 25',
+    price: 475,
+    location: 'Mairena del Alcor, Sevilla',
     type: 'local',
-    operation: 'venta',
+    operation: 'alquiler',
     status: 'disponible',
     description: `Ref: 26110. LOCAL muy bien ubicado de 90 m², calle Benajete, 25 de Mairena del Alcor.
 
@@ -64,6 +70,10 @@ Cuenta con luz y agua.
 
 DISPONIBLE JUNIO 2026.
 
+90 m² (5,28 €/m²).
+
+Extras: aire acondicionado y puerta automática.
+
 ${LEGAL_NOTICE}`,
     images: JSON.stringify([
       '/images/tsai2.png',
@@ -74,14 +84,14 @@ ${LEGAL_NOTICE}`,
     bathrooms: 2,
     sqMeters: 90,
     availability: 'Junio 2026',
-    heating: 'Aire acondicionado (3 equipos)',
+    heating: 'Aire acondicionado',
     featured: true,
     createdAt: now,
     updatedAt: now,
   },
   {
     id: 'ref-2053-plazas-garaje-guadalquivir',
-    title: 'Tres plazas de garaje en Calle Guadalquivir — Ref. 2053',
+    title: 'Tres plazas de garaje en Calle Guadalquivir',
     price: 15_000,
     location: 'Calle Guadalquivir, Mairena del Alcor, Sevilla',
     type: 'local',
